@@ -1,0 +1,20 @@
+$scope.login={};
+
+var firebaseObj = new Firebase("https://burning-fire-1723.firebaseio.com");
+
+var loginObj = $firebaseAuth(firebaseObj);
+
+$scope.signup = function(){
+        var email = $scope.login.email;
+        var password = $scope.login.password;
+
+        loginObj.$createUser(email, password)
+            .then(function() {
+                // do things if success
+                console.log('User creation success');
+                $state.go('home');
+            }, function(error) {
+                // do things if failure
+                console.log(error);
+            });
+}
