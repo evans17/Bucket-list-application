@@ -1,20 +1,20 @@
 # Bucket-list-application
 <ion-view title="iBucketList">
     <ion-nav-buttons side="primary">
-      <button class="button" ng-click="showUserHome()">
+      <button class="button" ng-click="register()">
         Back
       </button>
     </ion-nav-buttons>
      <ion-content>
       <div class="list list-inset">
               <label class="item item-input">
-                <input type="text" ng-model="user.wish" placeholder="Enter Wish" >
+                <input type="text" ng-model="user.wish" placeholder="register" >
               </label>
 
         </div>
       <div class="padding">
             <button ng-click="add()"  class="button button-block button-balanced">
-                  Add Wish
+                  register
             </button>
         </div>
     </ion-content>
